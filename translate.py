@@ -95,7 +95,10 @@ def main(argv):
                 i = int(i)
                 assert i in range(len(trans_list))
             except ValueError:
-                print('Error occured. Repeat please...')
+                print("Input is not a number or 'e' or 'd' or 'cd'. Repeat please...")
+                continue
+            except AssertionError:
+                print('Inserted num is out of the boundaries. Repeat please...')
                 continue
 
             back = trans_list[i]
